@@ -40,7 +40,7 @@ Inspired by x402.jobs on Solana, this project brings the same pay-per-use automa
 - **Caching:** Redis (for payment verification caching)
 
 #### **Frontend**
-- **Framework:** Next.js 14 (React)
+- **Framework:** Next.js 16 (React 19)
 - **Styling:** TailwindCSS
 - **Wallet Integration:** Stacks.js Connect, Hiro Wallet, Leather Wallet
 - **State Management:** React Context + hooks
