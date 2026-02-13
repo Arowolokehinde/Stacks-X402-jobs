@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!--
+    CDII Icon — Purple container version
+    For favicon, app icon, social avatar
+  -->
+
+  <!-- Container -->
+  <rect width="48" height="48" rx="12" fill="#5546FF"/>
+
+  <!-- C arc -->
+  <path
+    d="M16 8 C6 8, 2 15, 2 24 C2 33, 6 40, 16 40"
+    stroke="white"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- D arc -->
+  <path
+    d="M16 8 C26 8, 30 15, 30 24 C30 33, 26 40, 16 40"
+    stroke="white"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Orange diamond -->
+  <rect
+    x="12.75"
+    y="20.75"
+    width="6.5"
+    height="6.5"
+    rx="1.2"
+    transform="rotate(45 16 24)"
+    fill="#F7931A"
+  />
+
+  <!-- I pillar 1 -->
+  <line x1="36" y1="10" x2="36" y2="34" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- I pillar 2 -->
+  <line x1="43" y1="10" x2="43" y2="34" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Settlement bar -->
+  <rect x="33.5" y="37.5" width="12" height="2.4" rx="1.2" fill="#F7931A"/>
+</svg>
