@@ -60,6 +60,9 @@ export interface Skill {
   avgResponseTimeMs: number;
 }
 
+// ── Serializable Skill (no Zod schema — safe to pass to Client Components) ──
+export type SerializableSkill = Omit<Skill, "inputSchema">;
+
 // ── Skill Card (lighter type for lists) ────────────────────
 export type SkillSummary = Pick<
   Skill,
