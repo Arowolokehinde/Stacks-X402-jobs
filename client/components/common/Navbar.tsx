@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, Wallet } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
+import { WalletConnect } from "@/components/wallet/WalletConnect";
 import { Logo } from "@/components/common/Logo";
 import { cn } from "@/lib/utils";
 
@@ -55,10 +56,7 @@ export function Navbar() {
         {/* Desktop right side */}
         <div className="hidden md:flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="outline" size="sm" className="gap-2">
-            <Wallet className="h-4 w-4" />
-            Connect Wallet
-          </Button>
+          <WalletConnect />
         </div>
 
         {/* Mobile menu */}
@@ -95,10 +93,7 @@ export function Navbar() {
                 ))}
               </nav>
               <div className="mt-6 px-3">
-                <Button variant="outline" size="sm" className="w-full gap-2">
-                  <Wallet className="h-4 w-4" />
-                  Connect Wallet
-                </Button>
+                <WalletConnect fullWidth />
               </div>
             </SheetContent>
           </Sheet>
