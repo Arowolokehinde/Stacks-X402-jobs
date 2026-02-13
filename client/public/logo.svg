@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" fill="none">
+  <!--
+    CDII Protocol Mark — "The Gateway"
+
+    Concept:
+    C + D = Two mirrored arcs forming a gateway/portal (where payment passes through)
+    I + I = Twin vertical bars (pillars of settlement)
+    Orange diamond = The value node at the gateway center
+    Orange base = Foundation line connecting the pillars
+
+    Together: an abstract symbol for "402" (CDII) that reads as
+    a payment protocol icon — value flowing through a gateway.
+  -->
+
+  <!-- C arc — left gateway curve -->
+  <path
+    d="M18 6 C6 6, 1 14, 1 26 C1 38, 6 46, 18 46"
+    stroke="#5546FF"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- D arc — right gateway curve (mirrored) -->
+  <path
+    d="M18 6 C30 6, 35 14, 35 26 C35 38, 30 46, 18 46"
+    stroke="#5546FF"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Orange diamond node — value at the gateway center -->
+  <rect
+    x="14.5"
+    y="22.5"
+    width="7"
+    height="7"
+    rx="1.5"
+    transform="rotate(45 18 26)"
+    fill="#F7931A"
+  />
+
+  <!-- I pillar 1 -->
+  <line x1="42" y1="8" x2="42" y2="38" stroke="#5546FF" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- I pillar 2 -->
+  <line x1="50" y1="8" x2="50" y2="38" stroke="#5546FF" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Settlement bar (orange) -->
+  <rect x="39" y="42" width="14" height="2.8" rx="1.4" fill="#F7931A"/>
+
+  <!-- Three subtle dots below the gateway — Stacks-inspired layers -->
+  <circle cx="10" cy="50" r="1.2" fill="#5546FF" opacity="0.25"/>
+  <circle cx="18" cy="50" r="1.2" fill="#5546FF" opacity="0.25"/>
+  <circle cx="26" cy="50" r="1.2" fill="#5546FF" opacity="0.25"/>
+</svg>
