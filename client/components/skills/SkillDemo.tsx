@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Copy, Check } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PaymentButton } from "@/components/payment/PaymentButton";
 import type { SerializableSkill } from "@/types/skill";
 
 interface SkillDemoProps {
@@ -49,6 +49,8 @@ function JsonBlock({ data, label }: { data: unknown; label: string }) {
 }
 
 export function SkillDemo({ skill }: SkillDemoProps) {
+  const [result, setResult] = useState<unknown>(null);
+
   return (
     <Card>
       <CardHeader className="pb-3">
@@ -71,17 +73,24 @@ export function SkillDemo({ skill }: SkillDemoProps) {
           </TabsContent>
 
           <TabsContent value="output" className="mt-0">
-            <JsonBlock data={skill.exampleOutput} label="Response" />
+            <JsonBlock
+              data={result ?? skill.exampleOutput}
+              label={result ? "Live result" : "Example response"}
+            />
           </TabsContent>
         </Tabs>
 
-        {/* Execute button (placeholder — payment flow wired in M7) */}
-        <Button className="w-full mt-5 gap-2" size="lg">
-          <Play className="h-4 w-4" />
-          Execute with STX Payment
-        </Button>
+        {/* Payment-integrated execute button */}
+        <div className="mt-5">
+          <PaymentButton
+            endpoint={skill.endpoint}
+            priceMicroSTX={skill.priceMicroSTX}
+            body={skill.method === "POST" ? (skill.exampleInput as Record<string, unknown>) : undefined}
+            onResult={setResult}
+          />
+        </div>
         <p className="text-xs text-center text-muted-foreground mt-2">
-          Requires a connected Stacks wallet. Payment is atomic via x402.
+          Payment is atomic via x402 facilitator. You sign — we settle.
         </p>
       </CardContent>
     </Card>

@@ -10,7 +10,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { formatSTX } from "@/lib/utils/format";
 import type { SerializableSkill } from "@/types/skill";
@@ -115,11 +114,7 @@ export function SkillDetailHeader({ skill }: SkillDetailHeaderProps) {
           </div>
         </div>
 
-        {/* Execute CTA (placeholder — wired in M7) */}
-        <Button size="lg" className="shrink-0 gap-2 mt-2 sm:mt-0">
-          <Zap className="h-4 w-4" />
-          Execute — {formatSTX(skill.priceMicroSTX)}
-        </Button>
+        {/* Execute CTA — payment flow is in SkillDemo below */}
       </div>
     </div>
   );
